@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset=utf-8>
+        <meta name=description content="E-Learning v.0.0">
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <title>E-Learning v.0.0</title>
+        <link rel=stylesheet href="css/style.css">
+        <link rel=author href="humans.txt">
+    </head>
+
+    <script>
+	$(function() {
+		$( ".seccion div" ).draggable({});
+		//$( ".fondosNumeros" ).draggable({});
+		
+		$(".ag").click(function(e) {
+            e.preventDefault();
+        });
+		$(".ag2").click(function(e) {
+            e.preventDefault();
+			$("#fondoAcomodar").css("background-image","none");
+			$('#photoimg').val("");
+        });
+		$(".ag3").click(function(e) {
+            e.preventDefault();
+			$( ".seccion div" ).draggable("destroy");
+			$(".seccion").eq(currentIndex).html($(".seccion").eq(currentIndex).html().replace(new RegExp( "\\n", "g" ),""));
+			$(".seccion").eq(currentIndex).html($(".seccion").eq(currentIndex).html().replace(new RegExp( "\\t", "g" ),""));
+
+			$("#paraCopiar").text($(".seccion").eq(currentIndex).html().replace(/<\/div>/gi, "</div>\n").replace(/<div/gi, "\t<div"));			
+			$( ".seccion div" ).draggable({});
+        });
+		$('#botonCopiar').zclip({
+       			 path:'clip/ZeroClipboard.swf',
+       			 copy:function(){
+					 $(".ag3").trigger("click");
+					 return $('#paraCopiar').text();}
+   		});
+		$('#photoimg').live('change', function()	
+		{ 
+			var fileName = $(this).val().split('/').pop().split('\\').pop();
+		    $("#fondoAcomodar").css("background-image","url(imagenes/"+fileName+")");
+		});
+		$('#photoimg2').live('change', function()	
+		{ 
+			var fileName = $(this).val().split('/').pop().split('\\').pop();
+			$(".seccion").eq(currentIndex).append("<div><img src='imagenes/transacciones/"+fileName+"'/></div>");
+			$('#photoimg2').val("");
+			$( ".seccion div" ).draggable({});
+		});
+	});
+	</script>
+
+    <body>
+        
+    	<form id="" method="" enctype="multipart/form-data" accept="image/*" action="">
+		<input type="file" name="photoimg" id="photoimg" accept="image/*">
+
+		<br><br><br><br>
+		<div>Una imagen del slide</div>
+		<input type="file" name="photoimg2" id="photoimg2" accept="image/*">
+
+		</form>
+		<a href="#" class="ag2">Borrar Fondo</a>
+		<a href="#" class="ag3" style="display:none">Imprimir en consola</a>
+		<a href="#" id="botonCopiar">Imprimir en consola</a>
+		<div id="paraCopiar">
+		</div>
+
+
+        // <script src="js/main.js"></script>
+    </body>
+</html>
