@@ -1,0 +1,147 @@
+body{
+	overflow:visible;
+}
+
+
+#add-seccion {
+	background-color: #ccc;
+	border-radius: 0 0 12px 12px;
+	box-shadow: 0px 3px 5px rgba(0,0,0,0.3);
+	cursor: pointer;
+	height: 39px;
+	left: 465px;
+	margin: 0;
+	padding: 4px 7px;
+	position: relative;
+	text-align: center;
+	top: -10px;
+	width: 30px;
+	z-index: 1;
+}
+#codigo {
+	background-color: rgba(0,0,0,0.8);
+	display: none;
+	height: 100%;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 500;
+}
+#codigo pre{
+	background-color: #eee;
+	border-radius: 1em;
+	color: #333;
+	padding: 0 2em 1.5em;
+}
+
+#container-codigo {
+	margin: 10em auto;
+	max-width: 960px;
+}
+#cual-boton li {
+	display: block;
+}
+
+#cual-boton li {
+	list-style: none;
+	margin-right: 20px;
+	vertical-align: top;
+}
+
+#cual-boton p {
+	display: inline-block;
+	font-size: 12px;
+	margin: 0;
+	margin-left: 0.5em;
+	text-transform: capitalize;
+}
+
+#escenario{
+	min-height: 550px;
+	margin: 0 auto;
+	width: 960px;
+	position: relative;
+}
+#escenario div{
+	position: absolute;
+}
+
+#add-image{
+}
+
+#opciones {
+	margin: 0 auto;
+	position: relative;
+	top: -10px;
+	width: 960px;
+}
+
+li {
+	display: inline-block;
+	list-style: none;
+	margin-right: 20px;
+	vertical-align: top;
+}
+
+#opciones li p{
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+#opciones-seccion {
+	background-color: #ccc;
+	border-radius: 0 0 2em 2em;
+	box-shadow: 0px 4px 5px rgba(0,0,0,0.3);
+	font-family: sans-serif;
+	margin: 0 auto;
+	padding: 2em;
+	position: relative;
+}
+
+#opciones-seccion p {
+	font-size: 12px;
+	font-weight: bold;
+	margin-bottom: 3px;
+}
+
+#tipo-imagen{
+	vertical-align: bottom;
+}
+
+.columna {
+	display: inline-block;
+	min-width: 40%;
+	vertical-align: top;
+	padding-left: 4em;
+}
+
+.minus {
+	font-size: 50px;
+	line-height: 0.8em;
+}
+
+.plus {
+	font-size: 50px;
+	line-height: 0.8em;
+}
+.print {
+	display:none;
+	margin-top: 30px;
+	text-align: center;
+}
+
+.print input {
+	background-color: #ddd;
+	border-radius: 10px;
+	font-size: 16px;
+	margin: 5px;
+	padding: 10px 25px;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+	text-transform: uppercase;
+}
+
+.seccion div{
+	position: absolute;
+}

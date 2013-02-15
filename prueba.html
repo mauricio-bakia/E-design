@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset=utf-8>
+        <meta name=description content="Base para añadir secciones de elearning por diseñadores">
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <title>E-design</title>
+        <link rel=stylesheet href="css/style.css">
+        <link rel=author href="humans.txt">
+
+
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="js/jquery-migrate-1.1.0.min.js"></script>
+		<script src="js/jquery-ui-1.10.0.custom.min.js"></script>
+		<script src="js/jquery.zclip.min.js"></script>
+
+		
+    </head>
+    <body>
+    	<div id="opciones">
+    		
+	    	<form>
+	    		<div id="opciones-seccion" style="display:none;">
+					<div class="columna">
+						<div class="add-image">
+				    		<p>Añadir imagen?</p>
+							<li>
+								<input type="radio" name="imagen" value="si">
+								<p>si</p>
+							</li>
+							<li>
+								<input type="radio" name="imagen" value="no">
+								<p>no</p>
+							</li>
+				    		
+				    		<select id="tipo-imagen" name="tipo-imagen" style="display:none;">
+				    			<option value=""></option>
+				    			<option value="fondo">Fondo</option>
+				    			<option value="cuadro-texto">Cuadro Texto</option>
+				    			<option value="texto">Texto</option>
+				    			<option value="boton">Botón</option>
+				    		</select>
+
+							<div id="image-source" style="display:none;">
+				    			<input id="imagen" type="file" accept="image/*">
+				    		</div> 
+						</div>
+						
+			    		<div id="add-image" style="display:none;">
+				    		<p>Qué tipo de imagen?</p>
+				    		<input id="imagen" type="file" accept="image/*" value="">
+				    		<input type="button" value="Añadir">
+				    	</div> 
+				    	<!-- <p>Qué flecha debe mostrar?</p>
+			    		<select id="tipo-imagen" name="tipo-imagen">
+			    			<option value="">ninguna</option>
+			    			<option value="derecha">Derecha</option>
+			    			<option value="izquierda">Izquierda</option>
+			    			<option value="ambas">Der/ Izq</option>
+			    		</select>        -->
+					</div>    	
+					<div class="columna">
+
+						<div id="cual-boton" class="tipo" style="display:none;">
+				    		<ul>
+				    		    <li>
+						    		<input type="radio" value="siguiente" name="boton" >
+				    		    	<p>siguiente</p>
+				    		    </li>
+				    		    <li>
+						    		<input type="radio" value="anterior" name="boton" >
+				    		    	<p>anterior</p>
+				    		    </li>
+				    		    <li>
+						    		<input type="radio" value="volver" name="boton" >
+				    		    	<p>volver</p>
+				    		    </li>
+				    		    <li>
+						    		<input type="radio" value="atras" name="boton" >
+				    		    	<p>atras</p>
+				    		    </li>
+				    		    <li>
+						    		<input type="radio" value="iniciar" name="boton" >
+				    		    	<p>iniciar</p>
+				    		    </li>
+				    		    <li>
+						    		<input type="radio" value="comenzar" name="boton" >
+				    		    	<p>comenzar</p>
+				    		    </li>
+				    		</ul>
+			    		</div>
+
+			    		<div class="print">
+			    			<input type="button" value="Imprimir">
+			    		</div>
+					</div>    	
+	    		</div>
+	    		<div id="add-seccion"><div class="plus">+</div></div>
+			</form>
+	    	</form>
+    	</div>
+
+
+    	<div id="escenario">
+    	</div>
+
+    	<div id="codigo">
+    		<div id="container-codigo">
+	    		<pre>
+	    		</pre>
+	    		<input id="copiar-codigo" type="button" value="copiar"></input>
+	    		<input class="cerrar" type="button" value="cerrar"></input>
+    		</div>
+    	</div>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>
